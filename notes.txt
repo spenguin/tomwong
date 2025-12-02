@@ -1,0 +1,2 @@
+cd "J:\Weirdspace\Clients\T\Tom Wong\projects\holdingsite\wp-content\themes\tomwong"
+sass --watch scss/main.scss:style.css
