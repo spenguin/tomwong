@@ -15,4 +15,7 @@ h3 {
     background-image: $gradient-top-left;
     padding-bottom: 1.25rem;
     margin-bottom: 0;
+    @include screen-greater-than( tablet ) {
+        background-image: url("assets/furniture/pngtree-corporate-digital-network-presentation-with-abstract-world-map-and-global-cyber-picture-image_10240966.png");
+    }
 }

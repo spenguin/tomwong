@@ -42,7 +42,7 @@ require_once CORE_INC . 'blank-slate.php';
  * Enqueue scripts and styles.
  */
 // add_action( 'wp_enqueue_scripts', '\Core\upvancouver_enqueue_styles' );
-// add_action( 'wp_enqueue_scripts', '\Core\tomwong_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', '\Core\tomwong_enqueue_scripts' );
 
 // function upvancouver_enqueue_styles() 
 // {	
@@ -52,7 +52,7 @@ require_once CORE_INC . 'blank-slate.php';
 
 function tomwong_enqueue_scripts()
 {
-	wp_enqueue_script( 'navigation', CORE_JS . 'navigation.js', ['jquery'], '1.0.0', [] );
+	wp_enqueue_script( 'navigation', CORE_JS . 'navigation.js', ['jquery'], '1.0.0', TRUE );
 }
 
 // Removing front end admin bar because it's ugly

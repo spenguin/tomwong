@@ -21,11 +21,11 @@ Function to generate an RGB colour backgrund with a provided opacity
   */
   @mixin screen-greater-than($size) {
     @if ($size == tablet) {
-      @media screen and (min-width: $BFTablet) {
+      @media screen and (min-width: $TWTablet) {
         @content;
       }
     } @else if ($size == desktop) {
-      @media screen and (min-width: $BFDesktop) {
+      @media screen and (min-width: $TWDesktop) {
         @content;
       }
     } @else if ($size == maxwidth) {

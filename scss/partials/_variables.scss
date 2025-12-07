@@ -2,8 +2,8 @@
 
 /** Breakpoints */
 
-$BFTablet: 768px;
-$BFDesktop: 1200px;
+$TWTablet: 768px;
+$TWDesktop: 1200px;
 
 
 // Border Radii
@@ -14,6 +14,8 @@ $formRadius: 0.5rem;
 $maxWidth-Narrow: 729px;
 
 $aspectRatioPercentage: 56.25%;
+
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 /* Max width wrapper */
 .max-wrapper {

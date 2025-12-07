@@ -6,6 +6,10 @@
     <div class="menu-primary-container">
         <?php echo wp_nav_menu(['menu'=>'Main Menu']); ?>
     </div>
+<?php else: ?>
+    <div class="menu-home-container">
+        <?php echo wp_nav_menu(['menu'=>'Main Menu']); ?>
+    </div>
 <?php endif; ?>
 <div class="menu-mobile-container">
     <div class="burger-container">
@@ -16,14 +20,3 @@
     </div>
     <?php echo wp_nav_menu(['menu'=>'Main Menu']); ?>
 </div>
-
-<script>
-    (function(){
-    var burger = document.querySelector('.burger-container'),
-        header = document.querySelector('.menu-mobile-container');
-    
-    burger.onclick = function() {
-        header.classList.toggle('menu-opened');
-    }
-}());
-</script>

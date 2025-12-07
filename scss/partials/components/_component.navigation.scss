@@ -1,5 +1,5 @@
 // /** Navigation styles */
-$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
 $menuItems: 8;
 
 .menu-mobile-container {
@@ -9,11 +9,15 @@ $menuItems: 8;
     left: 0;
     height: 50px;
     width: 100%;
-    background: rgba(#000,0.8);
+    background: rgba($sapphire-sky,0.8);
     overflow: hidden;
     transition: all 0.5s ease-out, background 1s ease-out;
     transition-delay: 0.2s;
     z-index: 1;
+    @include screen-greater-than(tablet)
+    {
+        display: none;
+    }
     .burger-container {
         position: relative;
         display: inline-block;
@@ -36,7 +40,7 @@ $menuItems: 8;
                 height: 1px;
                 display: block;
                 position: relative;
-                background: #000;
+                background: #fff;
                 transition: all 0.3s $cubic;
                 transition-delay: 0s;
                 &.topBar {
@@ -49,13 +53,14 @@ $menuItems: 8;
         }
     }
     .menu-main-menu-container ul {
+        margin-left: 0;
         position: relative;
         display: block;
         padding: 0px 48px 0;
         list-style: none;
         li.menu-item {
-            border-bottom: 1px solid #333;
-            margin-top: 5px;
+            border-bottom: 1px solid $sky-blue;
+            // margin-top: 5px;
             transform: scale(1.15) translateY(-30px);
             opacity: 0;
             transition: transform 0.5s $cubic, opacity 0.6s $cubic;
@@ -69,18 +74,18 @@ $menuItems: 8;
                 position: relative;
                 color: #FFF;
                 // font-family: $mukta;
-                font-weight: 100;
+                // font-weight: 100;
                 text-decoration: none;
-                font-size: 22px;
-                line-height: 2.35;
-                font-weight: 200;
+                font-size: 1.25rem;
+                line-height: 1.8;
+                font-weight: 400;
                 width: 100%;
             }
         }
     }
     &.menu-opened {
         height: 100%;
-        background-color: #000;
+        background-color: $sapphire-sky;
         transition: all 0.3s ease-in, background 0.5s ease-in;
         transition-delay: 0.25s;
         .burger-container {
@@ -98,10 +103,10 @@ $menuItems: 8;
                 }
             }
         }
-        .menu-main-menu {
+        #menu-main-menu {
             li.menu-item {
                 transform: scale(1) translateY(0px);
-                opacity: 1;
+                opacity: 1!important;
                 @for $i from 1 through $menuItems {
                     &:nth-child(#{$i}) {
                         transition-delay: #{0.07 * $i+0.2}s;
@@ -112,24 +117,7 @@ $menuItems: 8;
     }
 }
 
-        .icon {
-            display: inline-block;
-            position: absolute;
-            height: 100%;
-            line-height: 50px;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            color: #FFF;
-            font-size: 22px;
-            left: 50%;
-            transform: translateX(-50%);
-            &.icon-bag {
-                right: 0;
-                top: 0;
-                left: auto;
-                transform: translateX(0px);
-                transition: transform 0.5s $cubic;
-                transition-delay: 0.65s;
-            }
-        }
+.menu-home-container {
+    display: none;
+}
+

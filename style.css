@@ -1131,6 +1131,38 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+/** Variables */
+/** Breakpoints */
+/* Max width wrapper */
+.max-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/** Mixins */
+/**
+Function to generate an RGB colour backgrund with a provided opacity
+(https://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity)
+*/
+/*
+element {
+     @include background-opacity(#333, 0.5);
+}*/
+/**
+Function to wrap appropriate media query around content
+param: screen size, either tablet or desktop 
+Requires breakpoints to be set or imported
+*/
+/**
+Function to provide necessary prefixes for grayscale (sic) filter
+param: percentage filtered
+Note: Yes, this should probably take a parameter of _which_ filter to apply. Maybe next time
+http://shouldiprefix.com/#filters
+*/
 /** Structure styling */
 /** Elements aggregator */
 /** Heading Styles */
@@ -1181,6 +1213,16 @@ h3 {
   padding-bottom: 1.25rem;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .home article {
+    background-image: url("assets/furniture/pngtree-corporate-digital-network-presentation-with-abstract-world-map-and-global-cyber-picture-image_10240966.png");
+  }
+}
+
+/** Styles for header */
+#header {
+  margin-bottom: 50px;
+}
 
 .menu-mobile-container {
   position: absolute;
@@ -1189,11 +1231,16 @@ h3 {
   left: 0;
   height: 50px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 99, 227, 0.8);
   overflow: hidden;
   transition: all 0.5s ease-out, background 1s ease-out;
   transition-delay: 0.2s;
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .menu-mobile-container {
+    display: none;
+  }
 }
 .menu-mobile-container .burger-container {
   position: relative;
@@ -1219,7 +1266,7 @@ h3 {
   height: 1px;
   display: block;
   position: relative;
-  background: #000;
+  background: #fff;
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition-delay: 0s;
 }
@@ -1230,14 +1277,14 @@ h3 {
   transform: translateY(6px) rotate(0deg);
 }
 .menu-mobile-container .menu-main-menu-container ul {
+  margin-left: 0;
   position: relative;
   display: block;
   padding: 0px 48px 0;
   list-style: none;
 }
 .menu-mobile-container .menu-main-menu-container ul li.menu-item {
-  border-bottom: 1px solid #333;
-  margin-top: 5px;
+  border-bottom: 1px solid #6fc7f3;
   transform: scale(1.15) translateY(-30px);
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
@@ -1270,16 +1317,15 @@ h3 {
   display: block;
   position: relative;
   color: #FFF;
-  font-weight: 100;
   text-decoration: none;
-  font-size: 22px;
-  line-height: 2.35;
-  font-weight: 200;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 400;
   width: 100%;
 }
 .menu-mobile-container.menu-opened {
   height: 100%;
-  background-color: #000;
+  background-color: #0063e3;
   transition: all 0.3s ease-in, background 0.5s ease-in;
   transition-delay: 0.25s;
 }
@@ -1296,55 +1342,37 @@ h3 {
 .menu-mobile-container.menu-opened .burger-container #burger .bar.btmBar {
   transform: translateY(3px) rotate(-45deg);
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item {
   transform: scale(1) translateY(0px);
-  opacity: 1;
+  opacity: 1 !important;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(1) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(1) {
   transition-delay: 0.27s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(2) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(2) {
   transition-delay: 0.34s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(3) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(3) {
   transition-delay: 0.41s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(4) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(4) {
   transition-delay: 0.48s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(5) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(5) {
   transition-delay: 0.55s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(6) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(6) {
   transition-delay: 0.62s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(7) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(7) {
   transition-delay: 0.69s;
 }
-.menu-mobile-container.menu-opened .menu-main-menu li.menu-item:nth-child(8) {
+.menu-mobile-container.menu-opened #menu-main-menu li.menu-item:nth-child(8) {
   transition-delay: 0.76s;
 }
 
-.icon {
-  display: inline-block;
-  position: absolute;
-  height: 100%;
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  color: #FFF;
-  font-size: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.icon.icon-bag {
-  right: 0;
-  top: 0;
-  left: auto;
-  transform: translateX(0px);
-  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition-delay: 0.65s;
+.menu-home-container {
+  display: none;
 }
 
 /** Footer styles */
