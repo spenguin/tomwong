@@ -1,5 +1,6 @@
             </main>
             <?php //get_sidebar(); ?>
+            <?php get_template_part( 'template-parts/home-navigation' ); ?>
         </div>
         <footer id="footer" role="contentinfo">
             <div id="copyright">

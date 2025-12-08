@@ -2,4 +2,7 @@
 
 #header {
     margin-bottom: 50px;
+    @include screen-greater-than( tablet ) {
+        margin-bottom: 0;
+    }
 }

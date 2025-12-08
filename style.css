@@ -1212,16 +1212,26 @@ h3 {
   background-image: linear-gradient(225deg, #00c2fa, #0637c5, #0063e3, #17a5f4, #6fc7f3);
   padding-bottom: 1.25rem;
   margin-bottom: 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .home article {
     background-image: url("assets/furniture/pngtree-corporate-digital-network-presentation-with-abstract-world-map-and-global-cyber-picture-image_10240966.png");
+    background-size: cover;
   }
 }
 
 /** Styles for header */
 #header {
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  #header {
+    margin-bottom: 0;
+  }
 }
 
 .menu-mobile-container {
@@ -1371,8 +1381,39 @@ h3 {
   transition-delay: 0.76s;
 }
 
-.menu-home-container {
+.menu-home-container,
+.menu-primary-container {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-home-container,
+  .menu-primary-container {
+    display: block;
+    background-image: linear-gradient(315deg, #00c2fa, #0637c5, #0063e3, #17a5f4, #6fc7f3);
+  }
+  .menu-home-container .menu,
+  .menu-primary-container .menu {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  .menu-home-container .menu li,
+  .menu-primary-container .menu li {
+    padding: 0.5rem 0.85rem;
+  }
+  .menu-home-container .menu a,
+  .menu-primary-container .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: block;
+  }
+  .menu-home-container .menu a:hover,
+  .menu-primary-container .menu a:hover {
+    color: #6fc7f3;
+  }
 }
 
 /** Footer styles */
