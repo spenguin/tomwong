@@ -1,0 +1,16 @@
+/** Page templates styles */
+
+.two-column-wrapper{
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+    @include screen-greater-than( tablet ) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        > div {
+            width: 48%;
+        }
+    }
+}

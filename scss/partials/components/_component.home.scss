@@ -1,26 +1,30 @@
 /** Home Page styles */
-h1 {
-    margin-bottom: 0;
-    margin-top: 0;
-    color: white;
-}
-h2 {
-    color: white;
-}
-h3 {
-    color: white;
-}
 
-.home article {
-    background-image: $gradient-top-left;
-    padding-bottom: 1.25rem;
-    margin-bottom: 0;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include screen-greater-than( tablet ) {
-        background-image: url("assets/furniture/pngtree-corporate-digital-network-presentation-with-abstract-world-map-and-global-cyber-picture-image_10240966.png");
-        background-size: cover;
+
+.home {
+    h1 {
+        margin-bottom: 0;
+        margin-top: 0;
+        color: white;
+    }
+    h2 {
+        color: white;
+    }
+    h3 {
+        color: white;
+    }
+
+    article {
+        background-image: $gradient-top-left;
+        padding-bottom: 1.25rem;
+        margin-bottom: 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include screen-greater-than( tablet ) {
+            background-image: url("assets/furniture/pngtree-corporate-digital-network-presentation-with-abstract-world-map-and-global-cyber-picture-image_10240966.png");
+            background-size: cover;
+        }
     }
 }

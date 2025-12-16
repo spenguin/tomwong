@@ -1133,12 +1133,6 @@ body {
 
 /** Variables */
 /** Breakpoints */
-/* Max width wrapper */
-.max-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .hidden {
   display: none;
 }
@@ -1164,6 +1158,41 @@ Note: Yes, this should probably take a parameter of _which_ filter to apply. May
 http://shouldiprefix.com/#filters
 */
 /** Structure styling */
+/** Page templates styles */
+.two-column-wrapper img {
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .two-column-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .two-column-wrapper > div {
+    width: 48%;
+  }
+}
+
+/** WRappers styles */
+.max-wrapper {
+  padding: 0 5%;
+}
+@media screen and (min-width: 768px) {
+  .max-wrapper {
+    padding: 0 15%;
+  }
+}
+.max-wrapper__narrow {
+  max-width: 729px;
+  margin: 0 auto;
+}
+
+.cta--wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /** Elements aggregator */
 /** Heading Styles */
 h1, h2, h3, h4, h5, h6 {
@@ -1173,8 +1202,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.25rem;
-  text-transform: uppercase;
   font-weight: 700;
+  color: #0637c5;
 }
 
 h2 {
@@ -1194,20 +1223,17 @@ h4 {
 
 /** Component styles aggregator */
 /** Home Page styles */
-h1 {
+.home h1 {
   margin-bottom: 0;
   margin-top: 0;
   color: white;
 }
-
-h2 {
+.home h2 {
   color: white;
 }
-
-h3 {
+.home h3 {
   color: white;
 }
-
 .home article {
   background-image: linear-gradient(225deg, #00c2fa, #0637c5, #0063e3, #17a5f4, #6fc7f3);
   padding-bottom: 1.25rem;
