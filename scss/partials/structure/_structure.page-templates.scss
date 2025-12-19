@@ -1,6 +1,7 @@
 /** Page templates styles */
 
 .two-column-wrapper{
+    margin-bottom: 2rem!important;
     img {
         margin: 0 auto;
         display: block;
@@ -10,7 +11,10 @@
         flex-direction: row;
         justify-content: space-between;
         > div {
-            width: 48%;
+            width: 49%;
+        }
+        h2 {
+            margin-top: -1rem;
         }
     }
 }

@@ -1124,6 +1124,11 @@ textarea {
   margin-bottom: 1.5em;
 }
 
+/** Global styles */
+html {
+  font-size: 1.3rem;
+}
+
 /** Colours*/
 /* SCSS HEX */
 /** Fonts */
@@ -1159,6 +1164,9 @@ http://shouldiprefix.com/#filters
 */
 /** Structure styling */
 /** Page templates styles */
+.two-column-wrapper {
+  margin-bottom: 2rem !important;
+}
 .two-column-wrapper img {
   margin: 0 auto;
   display: block;
@@ -1170,18 +1178,18 @@ http://shouldiprefix.com/#filters
     justify-content: space-between;
   }
   .two-column-wrapper > div {
-    width: 48%;
+    width: 49%;
+  }
+  .two-column-wrapper h2 {
+    margin-top: -1rem;
   }
 }
 
 /** WRappers styles */
 .max-wrapper {
   padding: 0 5%;
-}
-@media screen and (min-width: 768px) {
-  .max-wrapper {
-    padding: 0 15%;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .max-wrapper__narrow {
   max-width: 729px;
