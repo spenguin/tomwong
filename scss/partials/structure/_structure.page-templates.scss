@@ -18,3 +18,13 @@
         }
     }
 }
+
+.three-column-wrapper {
+    margin-bottom: 2rem!important;
+    @include screen-greater-than( tablet ){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
